@@ -25,6 +25,8 @@ function processModule(module) {
     var contents;
     if (!err) {
       contents = JSON.parse(fs.readFileSync(manifest));
+      // To avoid a break if the script field not present.
+      if (!contents.scripts) { contents.scripts = {}; }
       contents.scripts.install = script;
       fs.writeFile(manifest, JSON.stringify(contents, null, 4), function(err) {
         if (!err) publishModule(module);
